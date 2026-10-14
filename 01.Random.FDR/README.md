@@ -1,4 +1,5 @@
-**Random Datasets Generator for FDR evaluation:**`generate_random.py` generates randomized gene annotations and genomic domain boundaries for empirical false discovery rate (FDR) estimation in gene-expression concordance analysis. It implements a null model without an explicit concordance-generating mechanism. The generator preserves strand-specific gene counts and prevents overlaps within each strand, but genes on opposite strands may overlap. 
+# Random Datasets Generator for FDR evaluation
+`generate_random.py` generates randomized gene annotations and genomic domain boundaries for empirical false discovery rate (FDR) estimation in gene-expression concordance analysis. It implements a null model without an explicit concordance-generating mechanism. The generator preserves strand-specific gene counts and prevents overlaps within each strand, but genes on opposite strands may overlap. 
 
 **Gene coordinates:** Gene annotations are read from a BED5 file. For each chromosome, the generator preserves the observed gene count on each strand and derives the coordinate range, gene-length range, and expression-score range from the input annotation.
 
