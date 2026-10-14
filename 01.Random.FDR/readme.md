@@ -33,18 +33,18 @@ To use uniformly distributed inter-domain gaps, change parameters appropriately:
 
 **Command-line arguments**
 
-| Argument             | Default                 | Description                                                   |
-| -------------------- | ----------------------- | ------------------------------------------------------------- |
-| `--genes`            | Required                | Input gene annotation in BED5 format                          |
-| `--expression`       | `uniform`               | Expression model: `uniform` or `original`                     |
-| `--mean-domain-size` | `1000000`               | Mean domain size in base pairs                                |
-| `--mean-gap`         | `40000`                 | Mean gap (`normal`) or maximum gap (`uniform`), in base pairs |
-| `--gap-mode`         | `normal`                | Gap distribution: `normal` or `uniform`                       |
-| `--n-files`          | `100`                   | Number of replicate pairs                                     |
-| `--outdir`           | `./random_datasets`     | Output directory                                              |
-| `--tag`              | Automatically generated | Filename label                                                |
-| `--seed`             | ``                      | Base random seed, by default defined by urandom               |
-| `--cores`            | CPU count minus one     | Number of worker processes                                    |
+| Argument               | Default                 | Description                                                   |
+| ---------------------- | ----------------------- | ------------------------------------------------------------- |
+| `--genes`              | Required                | Input gene annotation in BED5 format                          |
+| `--expression`         | `uniform`               | Expression model: `uniform` or `original`                     |
+| `--mean-domain-size`   | `1000000`               | Mean domain size in base pairs                                |
+| `--mean-gap`           | `40000`                 | Mean gap (`normal`) or maximum gap (`uniform`), in base pairs |
+| `--gap-mode`           | `normal`                | Gap distribution: `normal` or `uniform`                       |
+| `--n-files`            | `100`                   | Number of replicate pairs                                     |
+| `--outdir`             | `./random_datasets`     | Output directory                                              |
+| `--tag`                | Automatically generated | Filename label                                                |
+| `--seed`               | ``                      | Base random seed, by default defined by urandom               |
+| `--cores`              | CPU count minus one     | Number of worker processes                                    |
 
 **Output:** Each replicate produces a pair of BED files:
 
