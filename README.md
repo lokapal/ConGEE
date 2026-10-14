@@ -3,4 +3,5 @@
 <br>Yuri V. Kravatsky, Vladimir R. Chechetkin, Konstantin S. Stepovoi, Nickolai A. Tchurikov, Antonina N. Diatlova, Elena S. Klushevskaya and Galina I. Kravatskaya
 <br>"ConGEE: a Statistically based Approach to the Concordant Gene Expression Evaluation inside Genome Domains". 2026, <I>XXXXXXXXX</I>, XXX(xx), XXXX
 <br>https://doi.org/XXXXXXXXXXX
+<br>PMID: XXXXXXXXX
 <br>If you use any of these scripts in the scientific works, please cite the article above.
