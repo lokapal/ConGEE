@@ -55,6 +55,6 @@ python Calibrate.Dispersion.Table.py \
 
 The script also reports the domain gene-count distribution, the pooled correction factor, its variation across dispersion amplitudes, and its difference from the correction factor in the existing calibration table. A warning is issued when the relative variation across dispersion amplitudes exceeds 3%, indicating that the assumption of a dispersion-independent correction factor may introduce bias.
 
-The resulting correction factor *f* for each number of genes per domain, *N*, should be stored in the `CALIB_FAC` array in ConGEE or loaded from an external calibration file (see the `ConGEE` documentation).
+The resulting correction factor *f* for each number of genes per domain, *N*, should be stored in the `CALIB_FAC` array in `ConGEE` or loaded from an external calibration file (see the `ConGEE` documentation).
 
 
