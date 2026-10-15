@@ -1,7 +1,9 @@
 # `Script to recalibrate expression dispersion detection`
 
 `Calibrate.Dispersion.Table.py` estimates the expression dispersion correction factor *f* for a given genomic domain structure by MC simulations. *f* corrects the median relative expression range of concordant domains for the number of genes per domain, enabling the noise estimator in `ConGEE` to recover the dispersion amplitude *H*.
+
 The script derives a structure-specific correction factor by simulating concordant domains using the supplied gene annotations and domain boundaries. Genes are assigned to domains by their midpoints, employing the genes-to-domains mapping  function from `ConGEE`. Domains containing fewer than two genes are excluded.
+
 For each expression dispersion amplitude *H*, gene expression values are sampled from the uniform distribution U(1-*H*,1+*H*). The relative expression range is calculated for each multi-gene domain, and its median across domains is divided by *H* to obtain a replicate-specific correction factor. The simulation is repeated over a predefined grid of dispersions (from 0.05 to 0.5 with step 0.05).
 The script reports the median correction factor and its [5%, 95%] interval at each *H*. A pooled factor is calculated as the median of the factors obtained across the simulated noise levels. The variation of *H* is also assessed to evaluate deviation from the assumption that a single correction factor represents the entire expression dispersion range.
 
@@ -42,6 +44,5 @@ python Calibrate.Dispersion.Table.py \
 - `f_low`, `f_high`: 5th and 95th percentiles for individual noise amplitudes; minimum and maximum simulated median factors, respectively, for the pooled row.
 
 The script also reports the domain gene-count distribution, the pooled correction factor, its variation across dispersion amplitudes, and its difference from the correction factor in the existing calibration table. A warning is issued when the relative variation across dispersion amplitudes exceeds 3%, indicating that the assumption of a dispersion-independent correction factor may introduce bias.
+
 The resulting correction factor *f* for each number of genes per domain, *N*, should be stored in the `CALIB_FAC` array in `ConGEE` or loaded from an external calibration file (see the `ConGEE` documentation).
-
-
